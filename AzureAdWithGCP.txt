@@ -1,0 +1,17 @@
+MAC Address : 00-FF-61-D2-6E-85
+
+base URL : https://second-capsule-359104.de.r.appspot.com/
+
+Sign in - https://second-capsule-359104.de.r.appspot.com/signin-oidc
+
+Sign out - https://localhost:44391/signout-oidc
+
+after deployment - 
+https://second-capsule-359104.de.r.appspot.com/signout-oidc
+
+0deac04e-0ccc-47f6-b4e8-7ba5a1eae331
+
+
+https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/google-apps-tutorial#configure-google-cloudg-suite-connector-by-microsoft-sso
+
+https://cloud.google.com/architecture/identity/federating-gcp-with-azure-ad-configuring-provisioning-and-single-sign-on#configuring_azure_ad_for_single_sign-on

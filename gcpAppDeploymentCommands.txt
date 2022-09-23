@@ -1,0 +1,37 @@
+Deployment on GGCP for .net app
+
+1).Copy the project in the folder
+2). dotnet publish -c Release
+3). Add Dockerfile and app.yaml file
+4). cd to bin/Release/net6.0/publish
+5). run command gcloud app deploy -servicename
+
+
+https://second-capsule-359104.de.r.appspot.com/WeatherForecast
+
+
+connect to cloud sql : 
+Server=xxx.xxx.xxx.xxx;Database=DB_NAME;Uid=USER_NAME;Password=PASSWORD
+
+To run and check app : 
+dotnet run --urls=http://localhost:8080
+
+Learning Code on Time - CommandOps, 
+
+Eject 
+Husky 
+ESLint 
+
+Status-
+-Learning Code on Time 
+-Learning CommandOps - MiddleMile
+-Learning Controller Design - MiddleMile
+
+$ npm install sass
+# or
+$ yarn add sass
+
+GS-2799	
+Harshvj@89
+
+929467

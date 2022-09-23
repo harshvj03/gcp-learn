@@ -1,0 +1,139 @@
+GCP - Learn
+
+Commands Used : 
+
+sudo su
+apt update
+apt install apache2
+
+ls /var/www/html
+echo "Hello World"
+echo "Hello World" > /var/www/html/index.html
+echo $(hostname)
+echo $(hostname -i)
+echo "Hello World from $(hostname)"
+echo "Hello World from $(hostname -i)"
+echo "Hello World from $(hostname -i)" > /var/www/html/index.html
+sudo service apache2 start
+
+
+
+
+Internal IP : 10.182.0.2
+External IP : 34.125.245.103
+http://34.125.155.23/
+34.125.245.103
+
+script : 
+
+#!/bin/bash
+apt update
+apt -y install apache2
+echo "Hello World from $(hostname) $(hostname -i)" > /var/www/html/index.html
+
+
+//
+
+region: us-west4 (Las Vegas)
+
+zone: us-west4-b
+
+Dockerfile content : 
+FROM gcr.io/google-app-engine/aspnet:6
+ADD ./ /app
+ENV ASPNETCORE_URLS=http://*:${PORT}
+WORKDIR /app
+ENTRYPOINT [ "dotnet", "HelloWorldAppCore.dll"]
+
+app.yaml file : 
+env: flex
+runtime: custom
+manual_scaling: 
+	instances: 1
+
+
+b14dfe210e54
+
+gcloud config set project halogen-eon-359104
+
+Deploy Commands on cloud console
+
+dotnet run --urls=http://localhost:8080
+
+dotnet new mvc -o HelloWorldAspNetCore -f netcoreapp3.1
+
+
+//DOCKER FILE CONTENT
+
+FROM gcr.io/google-app-engine/aspnet:6.0
+ADD ./ /app
+ENV ASPNETCORE_URLS=http://*:${PORT}
+WORKDIR /app
+ENTRYPOINT [ "dotnet", "AzureADWeb.dll"]
+
+// APP YAML CONTENT: 
+
+
+
+
+POC 
+connect to mysql db
+workspace version : 
+create db : to connect to that db
+CRUD - 
+database first - priority
+
+contact@fundsindia.com
+
+-- 7358794767 - Magesh
+
+
+----------------------------------------
+Mysql CRUD
+
+mysql server : 8.0.25
+MYSQL workbench : 8.0.29
+mysql shell: 8.0.29
+Connector/NET: 8.0.29
+
+
+mysql -u root -p
+Enter password: <enter password>
+mysql>GRANT ALL ON *.* to root@'123.123.123.123' IDENTIFIED BY 'put-your-password';
+mysql>FLUSH PRIVILEGES;
+mysql>exit
+
+
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-6.0.400-linux-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+
+connection-string: second-capsule-359104:us-central1:test-1
+
+  ./cloud_sql_proxy -instances=second-capsule-359104:us-central1:test-1=tcp:0.0.0.0:1234
+  
+  gcloud sql instances describe INSTANCE_NAME
+  
+  -ip_address_types=PRIVATE
+  
+  ./cloud_sql_proxy -instances=second-capsule-359104:us-central1:test-1=tcp:3306
+  
+  
+  gcloud sql connect test --user=test-user
+
+appSettingContent
+
+// {
+//   "Logging": {
+//     "LogLevel": {
+//       "Default": "Information",
+//       "Microsoft.AspNetCore": "Warning"
+//     }
+//   },
+//   "AllowedHosts": "*",
+//   "ConnectionStrings": {
+//     "Default": "Server=second-capsule-359104:us-central1:test-1;Port=3306;Database=test;Uid=root;Pwd=Harshvj@89;"
+
+//   }
+// }
+

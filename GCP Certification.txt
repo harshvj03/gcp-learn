@@ -1,0 +1,97 @@
+GCP Certification: 
+
+Sustainted Use discount
+
+Commited use discount
+
+Preemptible VM: 
+Short-Lived cheaper
+30 sec warning
+- fault tolerent
+- cost sensitive
+- NOT Immediate
+
+Restricions: 
+NOT Always visible
+
+
+config
+
+gcloud config list account
+
+gcloud config list region
+
+gcloud config list compute/region
+
+gclouf config list core/account
+
+gcloud config set commands : 
+
+- gcloud config set core/project VALUE
+- gcloud config set compute/region VALUE
+- gcloud config set compute/zone VALUE
+- gcloud config set core/verbosity VALUE(debug)
+
+
+gcloud config configurations list - for listing 
+gcloud config configurations create - for create
+gcloud config list
+
+-- to active any particular configurations
+gcloud config configurations activate [CONFIGURATION_NAME]
+gcloud config configurations activate my-default-configurations
+
+-- describe configurations
+
+gcloud config configurations describe my-second-configuration
+
+--
+gcloud config configurations create/delete/describe/activate/list my-second-configuration
+
+command structure
+
+gcloud GROUP SUBGROUP ACTION
+
+gcloud compute instances list
+
+-- to see versions list
+gcloud app versions list
+
+gcloud app browse
+
+gcloud app browse --version=v0
+
+for slowly switching traffic to latest version : 
+gcloud app browse --version=v3 --no-promote
+gcloud app browse --version=v3
+
+gcloud app services set-traffic --splits=v3=.5,v2=.5
+
+
+watch curl [url]
+gcloud app services set-traffic --splits=v3=.5,v2=.5 --split-by=random
+
+send all traffic to v3 
+gcloud app services set-traffic --splits=v3=1
+
+Create a new Service : 
+
+cd .. 
+
+No .deps.json file found for the app
+
+
+Handling Databases on gcloud: 
+
+Export and Import data : 
+
+
+.\cloud_sql_proxy.exe -instances=second-capsule-359104:asia-east1:my-first-instance=tcp:3306
+
+
+in cloud proxy directory: cloud_sql_proxy -instances=second-capsule-359104:asia-east1:my-first-instance=tcp:3307
+
+
+npm install webpack-dev-server --save
+
+
